@@ -427,3 +427,10 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# DrawIO backup and temporal files
+*.drawio.bkp
+*.drawio.dtmp
+
+# MacOS 
+.DS_Store
