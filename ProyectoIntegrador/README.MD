@@ -4,8 +4,8 @@
 
 ## Fases del proyecto
 
-1. [Análisis preliminar](./FASE1.md)
-2. Análisis previo y funcional
+1. [Análisis preliminar](./fase_1/FASE1.md)
+2. [Análisis previo y funcional](./fase_2/FASE2.md)
 3. Análisis orgánico
 4. Conectar datos para programar
 5. Programar
