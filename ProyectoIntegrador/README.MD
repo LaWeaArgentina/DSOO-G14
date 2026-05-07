@@ -4,7 +4,7 @@
 
 ## Faces del proyecto
 
-1. Análisis preliminar
+1. [Análisis preliminar](./FASE1.md)
 2. Análisis previo y funcional
 3. Análisis orgánico
 4. Conectar datos para programar
