@@ -23,7 +23,7 @@ Se desea realizar un sistema tal que permita administrar de manera eficiente el 
 - Entrega de carnet y cobro de cuota mensual o diaria. 
 - Listado diario de los socios que en la fecha les vence la cuota.
 
-### Resolución
+### RESOLUCION FASE #1
 
 > Se listan las clases, sus subclases y se mencionan atributos y metódos básicos entre patentesis:
 
