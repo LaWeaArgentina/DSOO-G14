@@ -25,7 +25,7 @@ Se desea realizar un sistema tal que permita administrar de manera eficiente el 
 
 ### Resolución
 
-#### Clases
+> Se listan las clases, sus subclases y se mencionan atributos y metódos básicos entre patentesis:
 
 - Alumnos
     - Socios (vencimiento de cuota, estado de la cuota, pagar cuota, rutina)
