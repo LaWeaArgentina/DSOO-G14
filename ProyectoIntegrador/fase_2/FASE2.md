@@ -12,9 +12,7 @@ Te proponemos:
 
 ### RESOLUCION FASE #2
 
-#### Requerimientos
-
-Originales:
+Rquerimienros originales:
 - Registro de los socios y de los no socios.
 - Entrega de carnet y cobro de cuota mensual o diaria. 
 - Listado diario de los socios que en la fecha les vence la cuota.
@@ -24,7 +22,7 @@ Requerimientos en procesos:
 - Pagar cuota
     - Pagar cuota socio
     - Pagar cuota no-socio
-- Listar socios con vencimieto hoy
+- Listar socios con vencimiento hoy
 
 Proceso: Registrar Alumno
 - Descripción: Se crea una instancia de Alumno (haciendo uso de las sub-clases SOCIO o NOSOCIO). Se proporciona nombre y apellido y se obtine el ID.
