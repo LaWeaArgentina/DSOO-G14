@@ -25,13 +25,13 @@ Se desea realizar un sistema tal que permita administrar de manera eficiente el 
 
 ### RESOLUCION FASE #1
 
-> Se listan las clases, sus subclases y se mencionan atributos y metódos básicos entre patentesis:
+> Se listan las clases, sus subclases y se mencionan atributos y metódos básicos entre corchetes
 
-- Alumnos
-    - Socios (vencimiento de cuota, estado de la cuota, pagar cuota, rutina)
-    - No Socios (estado del pago, pagar, rutina)
+- Alumnos[ rutina, vencimiento, pagar() ]
+    - Socios [ obtenerEestadoCuota() ]
+    - NoSocios [ ]
 
 - Plantel
-    - Profesores (alumnos, sueldo)
+    - Profesores [ alumnos, sueldo ]
 
-- Rutina (descripcion)
+- Rutina [ descripcion ]
