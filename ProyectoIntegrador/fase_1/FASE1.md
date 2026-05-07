@@ -27,10 +27,10 @@ Se desea realizar un sistema tal que permita administrar de manera eficiente el 
 
 > Se listan las clases, sus subclases y se mencionan atributos y metódos básicos entre corchetes
 
-- Personas [ nombre, apelido, identificador ]
-    - Alumnos[ pagos, rutina, vencimiento, pagar(), obtenerEstadoPago() ]
-        - Socios [ obtenerEstadoPago(), pagar() ]
-        - NoSocios [ obtenerEstadoPago(), pagar() ]
-    - Profesores [ alumnos, sueldo ]
+- Persona [ nombre, apelido, identificador ]
+    - Alumno[ pagos, rutina, vencimiento, pagar(), obtenerEstadoPago() ]
+        - Socio [ obtenerEstadoPago(), pagar() ]
+        - NoSocio [ obtenerEstadoPago(), pagar() ]
+    - Profesore [ alumnos, sueldo ]
 - Rutina [ descripcion ]
-- Pagos [ periodoInicio, periodoFin ]
+- Pago [ periodoInicio, periodoFin ]
