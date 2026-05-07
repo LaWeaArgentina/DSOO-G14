@@ -2,7 +2,7 @@
 
 > Este documento es un extracto de lo mencionado en el [DSOO - Proyecto Integrador (presentación y fase 1)](https://aulasvirtuales.bue.edu.ar/mod/book/view.php?id=874251)
 
-## Faces del proyecto
+## Fases del proyecto
 
 1. [Análisis preliminar](./FASE1.md)
 2. Análisis previo y funcional
