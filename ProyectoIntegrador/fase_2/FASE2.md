@@ -45,3 +45,5 @@ Clases:
 - Socio
 - NoSocio
 - Pago
+
+> Ver: Fase2_AnalisisPrevioFuncional
