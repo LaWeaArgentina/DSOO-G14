@@ -46,4 +46,4 @@ Clases:
 - NoSocio
 - Pago
 
-> Ver: Fase2_AnalisisPrevioFuncional
+> Ver [Fase2_AnalisisPrevioFuncional.pdf](./Fase2_AnalisisPrevioFuncional.pdf)

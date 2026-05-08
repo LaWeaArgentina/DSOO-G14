@@ -23,4 +23,4 @@ Para resolver la tarea te proponemos:
 - Rutina [ descripcion ]
 - Pago [ periodoInicio, periodoFin ]
 
-> Ver Fase1_UMLClassDiagram
+> Ver [Fase1_UMLClassDiagram](./Fase1_UMLClassDiagram.drawio.pdf)
