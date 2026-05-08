@@ -29,7 +29,7 @@ Proceso: Registrar Alumno
 - Atributos: nombre, apellido
 - Respuesta: identificador
 
-Proceso: Pagar cuota
+Proceso: ~~Pagar cuota~~ Registrar un pago
 - Descripcion: Desde un Alumno se creara y guardara en la lista de pagos del mismo un pago. En el caso de SOCIOS el pago tendra inicio fin el primer dia del mes y fin el ultimo dia del mismo, salvo que se pague ya iniciado el periodo. En este caso comenzará al dia siguiente. Para los NOSOCIOS, el primer u ultimo dia del periodo sera el mismo dia del pago (pago diario).
 - Atributos: inicio del periodo, fin del periodo, monto
 - Extends:
