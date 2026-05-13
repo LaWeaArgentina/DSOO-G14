@@ -39,7 +39,9 @@ namespace ProyectoIntegrador
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // picLogo
@@ -55,60 +57,72 @@ namespace ProyectoIntegrador
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(258, 12);
+            this.lblUsuario.Location = new System.Drawing.Point(6, 18);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(51, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(48, 16);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Correo";
             // 
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(258, 57);
+            this.lblClave.Location = new System.Drawing.Point(6, 62);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(43, 17);
+            this.lblClave.Size = new System.Drawing.Size(42, 16);
             this.lblClave.TabIndex = 2;
             this.lblClave.Text = "Clave";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(258, 32);
+            this.txtUsuario.Location = new System.Drawing.Point(6, 37);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(266, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(254, 22);
             this.txtUsuario.TabIndex = 3;
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(258, 77);
+            this.txtContrasena.Location = new System.Drawing.Point(6, 81);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = 'x';
-            this.txtContrasena.Size = new System.Drawing.Size(266, 22);
+            this.txtContrasena.Size = new System.Drawing.Size(254, 22);
             this.txtContrasena.TabIndex = 4;
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(258, 211);
+            this.btnIngresar.Location = new System.Drawing.Point(6, 193);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(266, 41);
+            this.btnIngresar.Size = new System.Drawing.Size(254, 41);
             this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblUsuario);
+            this.groupBox1.Controls.Add(this.btnIngresar);
+            this.groupBox1.Controls.Add(this.txtUsuario);
+            this.groupBox1.Controls.Add(this.txtContrasena);
+            this.groupBox1.Controls.Add(this.lblClave);
+            this.groupBox1.Location = new System.Drawing.Point(258, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(266, 240);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ingresar";
+            // 
             // frmIngresar
             // 
             this.ClientSize = new System.Drawing.Size(536, 264);
-            this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.lblClave);
-            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.picLogo);
             this.Name = "frmIngresar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Club Deportivo";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -121,5 +135,6 @@ namespace ProyectoIntegrador
         private Label lblContrasena;
         private Button btnIngresar;
         private Label lblClave;
+        private GroupBox groupBox1;
     }
 }

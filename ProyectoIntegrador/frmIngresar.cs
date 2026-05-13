@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoIntegrador.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,17 +27,17 @@ namespace ProyectoIntegrador
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            const string USUARIO = "Administrador";
-            const string CONTRASENA = "Admin1234";
+            Usuario usuario = new Usuario();
 
-            if(txtUsuario.Text == USUARIO & txtContrasena.Text == CONTRASENA)
+            bool isValid = usuario.Ingresar(
+                txtUsuario.Text,
+                txtContrasena.Text
+            );
+
+            if(isValid)
             {
-                MessageBox.Show(
-                    "INGRESO OK",
-                    "Error de ingreso",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Stop
-                );
+                frmMenu menu = new frmMenu();
+                menu.ShowDialog();
             }
             else
             {
