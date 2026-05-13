@@ -14,7 +14,7 @@ CREATE TABLE Pago (
     id_pago INT PRIMARY KEY AUTO_INCREMENT,
     periodoInicio DATE NOT NULL,
     periodoFin DATE NOT NULL,
-    identificador_alumno INT NOT NULL,
+    identificadorAlumno INT NOT NULL,
     FOREIGN KEY (identificador_alumno) REFERENCES Alumno(identificador) ON DELETE CASCADE
 );
 
@@ -30,6 +30,12 @@ INSERT INTO Alumno (nombre, apellido, esSocio) VALUES
 ('Alumno', 'Dos', true),
 ('Alumno', 'Tres', false),
 ('Alumno', 'Cuatro', true);
+
+INSERT INTO Pagos (periodoInicio, periodoFin, identificadorAlumno) VALUES
+('2026-05-01','2026-05-01',1),
+('2026-05-01','2026-05-31',2),
+('2026-05-03','2026-05-03',3),
+('2026-05-01','2026-05-31',4);
 
 INSERT INTO Usuario (nombre, correo, clave) VALUES
 ('Admin','a@a.com','1234'),
