@@ -32,6 +32,7 @@ INSERT INTO Alumno (nombre, apellido, esSocio) VALUES
 ('Alumno', 'Cuatro', true);
 
 INSERT INTO Usuario (nombre, correo, clave) VALUES
+('Admin','a@a.com','1234'),
 ('Usuario1', 'usuario1@test.com', 'password123'),
 ('Usuario2', 'usuario2@test.com', 'password456');
 
