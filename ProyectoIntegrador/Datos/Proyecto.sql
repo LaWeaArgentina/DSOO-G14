@@ -25,6 +25,12 @@ CREATE TABLE Usuario (
     clave VARCHAR(50) NOT NULL
 );
 
+INSERT INTO Alumno (nombre, apellido, esSocio) VALUES
+('Alumno', 'Uno', false),
+('Alumno', 'Dos', true),
+('Alumno', 'Tres', false),
+('Alumno', 'Cuatro', true);
+
 INSERT INTO Usuario (nombre, correo, clave) VALUES
 ('Usuario1', 'usuario1@test.com', 'password123'),
 ('Usuario2', 'usuario2@test.com', 'password456');

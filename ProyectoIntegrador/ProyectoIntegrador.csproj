@@ -100,7 +100,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Conexion.cs" />
-    <Compile Include="Datos\Usuario.cs" />
+    <Compile Include="Datos\DatosAlumno.cs" />
+    <Compile Include="Datos\EjecutarComando.cs" />
+    <Compile Include="Datos\DatosUsuario.cs" />
+    <Compile Include="frmGestionarAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarAlumnos.Designer.cs">
+      <DependentUpon>frmGestionarAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +123,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmGestionarAlumnos.resx">
+      <DependentUpon>frmGestionarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIngresar.resx">
       <DependentUpon>frmIngresar.cs</DependentUpon>
     </EmbeddedResource>

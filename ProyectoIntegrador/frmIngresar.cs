@@ -27,7 +27,7 @@ namespace ProyectoIntegrador
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
+            DatosUsuario usuario = new DatosUsuario();
 
             bool isValid = usuario.Ingresar(
                 txtUsuario.Text,

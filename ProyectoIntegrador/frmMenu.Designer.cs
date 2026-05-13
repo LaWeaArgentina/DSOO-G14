@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
-            this.btnRegistrarAlumno = new System.Windows.Forms.Button();
-            this.btnRegistrarPago = new System.Windows.Forms.Button();
+            this.btnGestinarAlumnos = new System.Windows.Forms.Button();
+            this.btnGestionarPagos = new System.Windows.Forms.Button();
             this.btnListarVencimientos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,23 +38,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnRegistrarAlumno
+            // btnGestinarAlumnos
             // 
-            this.btnRegistrarAlumno.Location = new System.Drawing.Point(6, 21);
-            this.btnRegistrarAlumno.Name = "btnRegistrarAlumno";
-            this.btnRegistrarAlumno.Size = new System.Drawing.Size(500, 64);
-            this.btnRegistrarAlumno.TabIndex = 0;
-            this.btnRegistrarAlumno.Text = "Registrar Alumno";
-            this.btnRegistrarAlumno.UseVisualStyleBackColor = true;
+            this.btnGestinarAlumnos.Location = new System.Drawing.Point(6, 21);
+            this.btnGestinarAlumnos.Name = "btnGestinarAlumnos";
+            this.btnGestinarAlumnos.Size = new System.Drawing.Size(500, 64);
+            this.btnGestinarAlumnos.TabIndex = 0;
+            this.btnGestinarAlumnos.Text = "Gestionar Alumnos";
+            this.btnGestinarAlumnos.UseVisualStyleBackColor = true;
+            this.btnGestinarAlumnos.Click += new System.EventHandler(this.btnGestinarAlumnos_Click);
             // 
-            // btnRegistrarPago
+            // btnGestionarPagos
             // 
-            this.btnRegistrarPago.Location = new System.Drawing.Point(6, 91);
-            this.btnRegistrarPago.Name = "btnRegistrarPago";
-            this.btnRegistrarPago.Size = new System.Drawing.Size(500, 64);
-            this.btnRegistrarPago.TabIndex = 1;
-            this.btnRegistrarPago.Text = "Registrar Pago";
-            this.btnRegistrarPago.UseVisualStyleBackColor = true;
+            this.btnGestionarPagos.Location = new System.Drawing.Point(6, 91);
+            this.btnGestionarPagos.Name = "btnGestionarPagos";
+            this.btnGestionarPagos.Size = new System.Drawing.Size(500, 64);
+            this.btnGestionarPagos.TabIndex = 1;
+            this.btnGestionarPagos.Text = "Gestionar Pagos";
+            this.btnGestionarPagos.UseVisualStyleBackColor = true;
             // 
             // btnListarVencimientos
             // 
@@ -67,9 +68,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnRegistrarAlumno);
+            this.groupBox1.Controls.Add(this.btnGestinarAlumnos);
             this.groupBox1.Controls.Add(this.btnListarVencimientos);
-            this.groupBox1.Controls.Add(this.btnRegistrarPago);
+            this.groupBox1.Controls.Add(this.btnGestionarPagos);
             this.groupBox1.Location = new System.Drawing.Point(258, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(512, 240);
@@ -96,7 +97,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Club Deportivo";
+            this.Text = "Club Deportivo - Menú";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -105,8 +106,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnRegistrarAlumno;
-        private System.Windows.Forms.Button btnRegistrarPago;
+        private System.Windows.Forms.Button btnGestinarAlumnos;
+        private System.Windows.Forms.Button btnGestionarPagos;
         private System.Windows.Forms.Button btnListarVencimientos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;

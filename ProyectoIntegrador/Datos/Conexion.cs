@@ -1,11 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using ProyectoIntegrador.Datos;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProyectoIntegrador.Datos
 {
@@ -33,7 +27,11 @@ namespace ProyectoIntegrador.Datos
 
             try
             {
-                cadena.ConnectionString = "datasource=" + this.servidor + ";port=" + this.puerto + ";username=" + this.usuario + ";password=" + this.clave + ";Database=" + this.baseDatos;
+                cadena.ConnectionString = "datasource=" + this.servidor
+                    + ";port=" + this.puerto
+                    + ";username=" + this.usuario
+                    + ";password=" + this.clave
+                    + ";Database=" + this.baseDatos;
             }
 
             catch (Exception ex)
