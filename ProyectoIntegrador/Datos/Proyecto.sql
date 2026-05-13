@@ -57,16 +57,4 @@ BEGIN
     SELECT LAST_INSERT_ID() AS identificador;
 END$
 
-CREATE PROCEDURE EditarAlumno(in p_identificador INT, in p_nombre VARCHAR(100), in p_apellido VARCHAR(100), in p_esSocio BOOLEAN, in p_vencimiento DATE)
-BEGIN
-    UPDATE Alumno SET nombre = p_nombre, apellido = p_apellido, esSocio = p_esSocio, vencimiento = p_vencimiento WHERE identificador = p_identificador;
-    SELECT ROW_COUNT() AS filas_afectadas;
-END$
-
-CREATE PROCEDURE BorrarAlumno(in p_identificador INT)
-BEGIN
-    DELETE FROM Alumno WHERE identificador = p_identificador;
-    SELECT ROW_COUNT() AS filas_afectadas;
-END$
-
 DELIMITER ;
