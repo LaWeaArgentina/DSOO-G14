@@ -4,14 +4,14 @@
 
 ## Fases del proyecto
 
-1. [Análisis preliminar](./Documentacion/fase_1/FASE1.md)
-2. [Análisis previo y funcional](./Documentacion/fase_2/FASE2.md)
-3. [Análisis orgánico](./Documentacion/fase_3/FASE3.md)
-4. Conectar datos para programar
-5. Programar
-6. Prueba
-7. Puesta a punto del sistema
-8. Coloquio
+- [x] [Análisis preliminar](./Documentacion/fase_1/FASE1.md)
+- [x] [Análisis previo y funcional](./Documentacion/fase_2/FASE2.md)
+- [x] [Análisis orgánico](./Documentacion/fase_3/FASE3.md)
+- [x] Conectar datos para programar
+- [ ] Programar
+- [ ] Prueba
+- [ ] Puesta a punto del sistema
+- [ ] Coloquio
 
 ## Presentación del sistema
 
