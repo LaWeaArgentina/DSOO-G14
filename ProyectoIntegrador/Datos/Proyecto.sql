@@ -15,7 +15,7 @@ CREATE TABLE Pago (
     periodoInicio DATE NOT NULL,
     periodoFin DATE NOT NULL,
     identificadorAlumno INT NOT NULL,
-    FOREIGN KEY (identificador_alumno) REFERENCES Alumno(identificador) ON DELETE CASCADE
+    FOREIGN KEY (identificadorAlumno) REFERENCES Alumno(identificador) ON DELETE CASCADE
 );
 
 CREATE TABLE Usuario (
@@ -25,13 +25,16 @@ CREATE TABLE Usuario (
     clave VARCHAR(50) NOT NULL
 );
 
+CREATE INDEX idx_pago_alumno ON Pago(identificadorAlumno);
+CREATE INDEX idx_alumno_socio ON Alumno(esSocio);
+
 INSERT INTO Alumno (nombre, apellido, esSocio) VALUES
 ('Alumno', 'Uno', false),
 ('Alumno', 'Dos', true),
 ('Alumno', 'Tres', false),
 ('Alumno', 'Cuatro', true);
 
-INSERT INTO Pagos (periodoInicio, periodoFin, identificadorAlumno) VALUES
+INSERT INTO Pago (periodoInicio, periodoFin, identificadorAlumno) VALUES
 ('2026-05-01','2026-05-01',1),
 ('2026-05-01','2026-05-31',2),
 ('2026-05-03','2026-05-03',3),
@@ -41,9 +44,6 @@ INSERT INTO Usuario (nombre, correo, clave) VALUES
 ('Admin','a@a.com','1234'),
 ('Usuario1', 'usuario1@test.com', 'password123'),
 ('Usuario2', 'usuario2@test.com', 'password456');
-
-CREATE INDEX idx_pago_alumno ON Pago(identificador_alumno);
-CREATE INDEX idx_alumno_socio ON Alumno(esSocio);
 
 DELIMITER $
 
