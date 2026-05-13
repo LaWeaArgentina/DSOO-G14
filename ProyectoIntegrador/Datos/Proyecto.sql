@@ -6,8 +6,7 @@ CREATE TABLE Alumno (
     identificador INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
     apellido VARCHAR(100) NOT NULL,
-    esSocio BOOLEAN NOT NULL DEFAULT FALSE,
-    vencimiento DATE
+    esSocio BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 CREATE TABLE Pago (
@@ -15,7 +14,7 @@ CREATE TABLE Pago (
     periodoInicio DATE NOT NULL,
     periodoFin DATE NOT NULL,
     identificadorAlumno INT NOT NULL,
-    FOREIGN KEY (identificadorAlumno) REFERENCES Alumno(identificador) ON DELETE CASCADE
+    FOREIGN KEY (identificadorAlumno) REFERENCES Alumno(identificador)
 );
 
 CREATE TABLE Usuario (
@@ -41,7 +40,7 @@ INSERT INTO Pago (periodoInicio, periodoFin, identificadorAlumno) VALUES
 ('2026-05-01','2026-05-31',4);
 
 INSERT INTO Usuario (nombre, correo, clave) VALUES
-('Admin','a@a.com','1234'),
+('UsuarioX','x','x'),
 ('Usuario1', 'usuario1@test.com', 'password123'),
 ('Usuario2', 'usuario2@test.com', 'password456');
 
@@ -54,12 +53,14 @@ END$
 
 CREATE PROCEDURE LeerAlumnos()
 BEGIN
-    SELECT identificador, nombre, apellido, esSocio, vencimiento FROM Alumno;
+    SELECT a.identificador, a.nombre, a.apellido, a.esSocio,
+           (SELECT MAX(p.periodoFin) FROM Pago p WHERE p.identificadorAlumno = a.identificador) AS vencimiento
+    FROM Alumno a;
 END$
 
-CREATE PROCEDURE CrearAlumno(in p_nombre VARCHAR(100), in p_apellido VARCHAR(100), in p_esSocio BOOLEAN, in p_vencimiento DATE)
+CREATE PROCEDURE CrearAlumno(in p_nombre VARCHAR(100), in p_apellido VARCHAR(100), in p_esSocio BOOLEAN)
 BEGIN
-    INSERT INTO Alumno (nombre, apellido, esSocio, vencimiento) VALUES (p_nombre, p_apellido, p_esSocio, p_vencimiento);
+    INSERT INTO Alumno (nombre, apellido, esSocio) VALUES (p_nombre, p_apellido, p_esSocio);
     SELECT LAST_INSERT_ID() AS identificador;
 END$
 
