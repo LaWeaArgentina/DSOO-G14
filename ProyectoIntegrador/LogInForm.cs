@@ -31,9 +31,12 @@ namespace ProyectoIntegrador
 
             if(txtUsuario.Text == USUARIO & txtContrasena.Text == CONTRASENA)
             {
-                //this.Hide();
-                Form frmIngreso = new frmIngreso();
-                frmIngreso.ShowDialog();
+                MessageBox.Show(
+                    "INGRESO OK",
+                    "Error de ingreso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Stop
+                );
             }
             else
             {
@@ -43,9 +46,9 @@ namespace ProyectoIntegrador
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Stop
                 );
-                borrarDatos();
                 txtUsuario.Focus();
             }
+            borrarDatos();
         }
     }
 }
