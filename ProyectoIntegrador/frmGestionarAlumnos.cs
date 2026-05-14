@@ -36,6 +36,8 @@ namespace ProyectoIntegrador
 
         private void CargarDatos()
         {
+            dbgrdAlumnos.DataSource = null;
+
             DataTable datosalumnos = DatosAlumno.obtenerListaAlumnos();
 
             foreach (DataRow row in datosalumnos.Rows)
@@ -97,10 +99,13 @@ namespace ProyectoIntegrador
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
             chkSocio.Checked = false;
+            this.CargarDatos();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            int identificador;
+
             if (edit == false)
             {
                 if (chkSocio.Checked == true)
@@ -109,7 +114,7 @@ namespace ProyectoIntegrador
                         txtNombre.Text,
                         txtApellido.Text
                     );
-                    DatosAlumno.crearAlumno(newSocio);
+                    identificador = DatosAlumno.crearAlumno(newSocio);
                 }
 
                 else
@@ -118,8 +123,15 @@ namespace ProyectoIntegrador
                         txtNombre.Text,
                         txtApellido.Text
                     );
-                    DatosAlumno.crearAlumno(newNosocio);
+                    identificador = DatosAlumno.crearAlumno(newNosocio);
                 }
+
+                MessageBox.Show(
+                    "Se ha creado un nuevo alumno con identificador: " + identificador.ToString(),
+                    "Creado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation
+                );
             }
             
             else 
@@ -128,7 +140,6 @@ namespace ProyectoIntegrador
             }
 
             btnLimpiar_Click(sender, e);
-            CargarDatos();
         }
     }
 }

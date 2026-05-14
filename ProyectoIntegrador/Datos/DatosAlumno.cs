@@ -15,7 +15,7 @@ namespace ProyectoIntegrador.Datos
             return EjecutarComando.EjecutarMySQLCommand(LeerAlumnos);
         }
 
-        public static string crearAlumno(Alumno alumno)
+        public static int crearAlumno(Alumno alumno)
         {
             MySqlCommand CrearAlumno = new MySqlCommand("CrearAlumno");
 
@@ -24,7 +24,9 @@ namespace ProyectoIntegrador.Datos
             CrearAlumno.Parameters.Add("p_apellido", MySqlDbType.VarChar).Value = alumno.Apellido;
             CrearAlumno.Parameters.Add("p_esSocio", MySqlDbType.Bit).Value = alumno.EsSocio;
 
-            return EjecutarComando.EjecutarMySQLCommand(CrearAlumno).ToString();
+            return int.Parse(
+                EjecutarComando.EjecutarMySQLCommand(CrearAlumno).Rows[0]["identificador"].ToString()
+            );
         }
     }
 }
