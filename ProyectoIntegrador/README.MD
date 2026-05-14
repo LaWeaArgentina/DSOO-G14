@@ -8,10 +8,12 @@
 - [x] [2. Análisis previo y funcional](./Documentacion/fase_2/FASE2.md)
 - [x] [3. Análisis orgánico](./Documentacion/fase_3/FASE3.md)
 - [x] 4. Conectar datos para programar
-- [ ] 5. Programar
+- [x] 5. Programar
 - [ ] 6. Prueba
 - [ ] 7. Puesta a punto del sistema
 - [ ] 8. Coloquio
+
+> [Documentación Completa del Proyecto](./Documentacion/DocumentacionProyecto__ClubDeportivo.pdf)
 
 ## Presentación del sistema
 
