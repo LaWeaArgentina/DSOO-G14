@@ -38,3 +38,5 @@ namespace ProyectoIntegrador.Datos
             DataTable dt = EjecutarComando.EjecutarMySQLCommand(cmd);
             return Convert.ToInt32(dt.Rows[0][0]) > 0;
         }
+    }
+}
