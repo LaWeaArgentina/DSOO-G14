@@ -37,6 +37,7 @@ namespace ProyectoIntegrador
         private void CargarDatos()
         {
             dbgrdAlumnos.DataSource = null;
+            alumnos.Clear();
 
             DataTable datosalumnos = DatosAlumno.obtenerListaAlumnos();
 

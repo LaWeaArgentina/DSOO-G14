@@ -47,12 +47,12 @@
             this.dbgrdAlumnos.AllowUserToAddRows = false;
             this.dbgrdAlumnos.AllowUserToDeleteRows = false;
             this.dbgrdAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dbgrdAlumnos.Location = new System.Drawing.Point(12, 142);
+            this.dbgrdAlumnos.Location = new System.Drawing.Point(12, 168);
             this.dbgrdAlumnos.Name = "dbgrdAlumnos";
             this.dbgrdAlumnos.ReadOnly = true;
             this.dbgrdAlumnos.RowHeadersWidth = 51;
             this.dbgrdAlumnos.RowTemplate.Height = 24;
-            this.dbgrdAlumnos.Size = new System.Drawing.Size(758, 399);
+            this.dbgrdAlumnos.Size = new System.Drawing.Size(758, 373);
             this.dbgrdAlumnos.TabIndex = 0;
             this.dbgrdAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgrdAlumnos_CellClick);
             // 
@@ -61,7 +61,7 @@
             this.btnVolver.Location = new System.Drawing.Point(596, 21);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(156, 33);
-            this.btnVolver.TabIndex = 1;
+            this.btnVolver.TabIndex = 4;
             this.btnVolver.Text = "Volver al menú";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -78,26 +78,26 @@
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(758, 124);
+            this.groupBox1.Size = new System.Drawing.Size(758, 150);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(677, 84);
+            this.btnGuardar.Location = new System.Drawing.Point(677, 111);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 33);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(596, 84);
+            this.btnLimpiar.Location = new System.Drawing.Point(596, 111);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 33);
-            this.btnLimpiar.TabIndex = 6;
+            this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -105,17 +105,17 @@
             // chkSocio
             // 
             this.chkSocio.AutoSize = true;
-            this.chkSocio.Location = new System.Drawing.Point(402, 39);
+            this.chkSocio.Location = new System.Drawing.Point(6, 109);
             this.chkSocio.Name = "chkSocio";
             this.chkSocio.Size = new System.Drawing.Size(83, 20);
-            this.chkSocio.TabIndex = 5;
+            this.chkSocio.TabIndex = 2;
             this.chkSocio.Text = "Es Socio";
             this.chkSocio.UseVisualStyleBackColor = true;
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(204, 18);
+            this.lblApellido.Location = new System.Drawing.Point(6, 62);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(57, 16);
             this.lblApellido.TabIndex = 3;
@@ -132,7 +132,7 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(204, 37);
+            this.txtApellido.Location = new System.Drawing.Point(6, 81);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(192, 22);
             this.txtApellido.TabIndex = 1;
