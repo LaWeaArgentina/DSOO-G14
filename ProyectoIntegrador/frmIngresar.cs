@@ -1,12 +1,5 @@
 ﻿using ProyectoIntegrador.Datos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoIntegrador
@@ -27,9 +20,7 @@ namespace ProyectoIntegrador
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            DatosUsuario usuario = new DatosUsuario();
-
-            bool isValid = usuario.Ingresar(
+            bool isValid = DatosUsuario.Ingresar(
                 txtUsuario.Text,
                 txtContrasena.Text
             );
