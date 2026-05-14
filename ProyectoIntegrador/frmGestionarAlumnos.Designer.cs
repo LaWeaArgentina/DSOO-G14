@@ -31,13 +31,13 @@
             this.dbgrdAlumnos = new System.Windows.Forms.DataGridView();
             this.btnVolver = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.chkSocio = new System.Windows.Forms.CheckBox();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.chkSocio = new System.Windows.Forms.CheckBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dbgrdAlumnos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,9 +58,9 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(446, 94);
+            this.btnVolver.Location = new System.Drawing.Point(596, 21);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(144, 23);
+            this.btnVolver.Size = new System.Drawing.Size(156, 33);
             this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "Volver al menú";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@
             // 
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.btnVolver);
-            this.groupBox1.Controls.Add(this.btnEliminar);
+            this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.chkSocio);
             this.groupBox1.Controls.Add(this.lblApellido);
             this.groupBox1.Controls.Add(this.lblNombre);
@@ -81,6 +81,36 @@
             this.groupBox1.Size = new System.Drawing.Size(758, 124);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(677, 84);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 33);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(596, 84);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 33);
+            this.btnLimpiar.TabIndex = 6;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // chkSocio
+            // 
+            this.chkSocio.AutoSize = true;
+            this.chkSocio.Location = new System.Drawing.Point(402, 39);
+            this.chkSocio.Name = "chkSocio";
+            this.chkSocio.Size = new System.Drawing.Size(83, 20);
+            this.chkSocio.TabIndex = 5;
+            this.chkSocio.Text = "Es Socio";
+            this.chkSocio.UseVisualStyleBackColor = true;
             // 
             // lblApellido
             // 
@@ -114,34 +144,6 @@
             this.txtNombre.Size = new System.Drawing.Size(192, 22);
             this.txtNombre.TabIndex = 0;
             // 
-            // chkSocio
-            // 
-            this.chkSocio.AutoSize = true;
-            this.chkSocio.Location = new System.Drawing.Point(402, 39);
-            this.chkSocio.Name = "chkSocio";
-            this.chkSocio.Size = new System.Drawing.Size(83, 20);
-            this.chkSocio.TabIndex = 5;
-            this.chkSocio.Text = "Es Socio";
-            this.chkSocio.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(596, 94);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 6;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(677, 94);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 7;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
             // frmGestionarAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -170,6 +172,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.CheckBox chkSocio;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
