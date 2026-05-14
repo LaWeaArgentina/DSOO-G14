@@ -5,7 +5,7 @@ namespace ProyectoIntegrador.Datos
 {
     internal class DatosUsuario
     {
-        public bool Ingresar(string correo, string clave)
+        public static bool Ingresar(string correo, string clave)
         {
             MySqlCommand Ingresar = new MySqlCommand("Ingresar");
 

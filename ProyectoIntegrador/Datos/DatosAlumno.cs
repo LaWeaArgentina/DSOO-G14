@@ -15,10 +15,9 @@ namespace ProyectoIntegrador.Datos
             return EjecutarComando.EjecutarMySQLCommand(LeerAlumnos);
         }
 
-        public static bool crearAlumno(string nombre, string apellido, bool esSocio, string vencimiento )
+        public static int crearAlumno(Alumno alumno)
         {
-
-            return true;
+            return 0;
         }
     }
 }
