@@ -18,6 +18,22 @@ namespace ProyectoIntegrador
             CargarDatos();
         }
 
+        private DateTime transformarFecha(string fecha)
+        {
+            if (fecha == "")
+            {
+                return DateTime.MinValue;
+            }
+            else
+            {
+                return DateTime.ParseExact(
+                    fecha,
+                    "dd/M/yyyy HH:mm:ss",
+                    CultureInfo.InvariantCulture
+                );
+            }
+        }
+
         private void CargarDatos()
         {
             DataTable datosalumnos = DatosAlumno.obtenerListaAlumnos();
@@ -31,11 +47,9 @@ namespace ProyectoIntegrador
                             int.Parse( row["identificador"].ToString() ),
                             row["nombre"].ToString(),
                             row["apellido"].ToString(),
-                            DateTime.ParseExact(
-                                row["vencimiento"].ToString(),
-                                "dd/M/yyyy HH:mm:ss",
-                                CultureInfo.InvariantCulture
-                            ) 
+                            transformarFecha(
+                                row["vencimiento"].ToString()
+                            )
                         )
                     );
                 }
@@ -63,10 +77,18 @@ namespace ProyectoIntegrador
 
         private void dbgrdAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            edit = true;
-            txtNombre.Text = alumnos[e.RowIndex].Nombre;
-            txtApellido.Text = alumnos[e.RowIndex].Apellido;
-            chkSocio.Checked = alumnos[e.RowIndex].EsSocio;
+            if (e.RowIndex >= 0 && e.RowIndex < alumnos.Count)
+            {
+                edit = true;
+                txtNombre.Text = alumnos[e.RowIndex].Nombre;
+                txtApellido.Text = alumnos[e.RowIndex].Apellido;
+                chkSocio.Checked = alumnos[e.RowIndex].EsSocio;
+            }
+
+            else
+            {
+                btnLimpiar_Click(sender, e);
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
