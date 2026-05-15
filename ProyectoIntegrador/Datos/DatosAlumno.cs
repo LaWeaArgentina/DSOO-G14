@@ -28,5 +28,15 @@ namespace ProyectoIntegrador.Datos
                 EjecutarComando.EjecutarMySQLCommand(CrearAlumno).Rows[0]["identificador"].ToString()
             );
         }
+
+        public static bool existeAlumno(string nombre, string apellido)
+        {
+            string query = "SELECT COUNT(*) FROM Alumno WHERE nombre = @nombre AND apellido = @apellido";
+            MySqlCommand cmd = new MySqlCommand(query);
+            cmd.Parameters.AddWithValue("@nombre", nombre);
+            cmd.Parameters.AddWithValue("@apellido", apellido);
+            DataTable dt = EjecutarComando.EjecutarMySQLCommand(cmd);
+            return Convert.ToInt32(dt.Rows[0][0]) > 0;
+        }
     }
 }

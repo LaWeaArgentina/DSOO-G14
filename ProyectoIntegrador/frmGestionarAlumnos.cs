@@ -109,6 +109,20 @@ namespace ProyectoIntegrador
 
             if (edit == false)
             {
+                // Verificar que los campos no estén vacíos
+                if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text))
+                {
+                    MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Verificar que el alumno no exista ya
+                if (DatosAlumno.existeAlumno(txtNombre.Text.Trim(), txtApellido.Text.Trim()))
+                {
+                    MessageBox.Show("Ya existe un alumno con ese nombre y apellido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 if (chkSocio.Checked == true)
                 {
                     Socio newSocio = new Socio(
